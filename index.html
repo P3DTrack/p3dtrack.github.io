@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Pseudo 3D Representation for Ego-centric 2D Multiple Object Tracking">
+  <meta name="keywords" content="Ba^2-Det">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Pseudo 3D Representation for Ego-centric 2D Multiple Object Tracking</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Learning Pseudo 3D Representation for Ego-centric 2D Multiple Object Tracking</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Authors
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths is-centered">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Data association is a knotty problem for 2D Multiple Object Tracking due to the object occlusion. However, in 3D space, data association is not so hard. Only with a 3D Kalman Filter, the online object tracker can associate the detections from LiDAR. In this paper, we rethink the data association in 2D MOT and utilize the 3D object representation to separate each object in the feature space. Unlike the existing depth-based MOT methods, the 3D object representation can be jointly learned with the object association module. Besides, the object’s 3D representation is learned from the video and supervised by the 2D tracking labels without additional manual annotations from LiDAR or pretrained depth estimator. With 3D object representation learning from Pseudo 3D (P3D) object labels in monocular videos, we propose a new 2D MOT paradigm, called P3DTrack. Extensive experiments show the effectiveness of our method. We achieve state-of-the-art performance on the ego-centric datasets, KITTI and Waymo Open Dataset (WOD). Code will be released.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+  
+<!-- <section class="section">
+  <div class="container is-max-desktop has-text-centered"> 
+    <h2 class="title is-3">Introduction Video</h2>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <video poster="" id="intro" autoplay controls muted loop playsinline width="100%">
+          <source src="" type="video/mp4">
+        </video>
+        </div>
+     </div>
+  </div>
+</section> -->
+  
+<!-- <section class="section">
+   <div class="container is-max-desktop"> -->
+    <!-- Methodology. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/method.png" width="100%">
+          <p>
+              Pipeline.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Methodology. -->
+  <!-- </div>
+</section> -->
+  
+<section class="section">
+   <!-- Paper video. -->
+  <div class="container is-max-desktop has-text-centered"> 
+  <h2 class="title is-3">Video & Demo</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">(1) Tracking results on Waymo open dataset (WOD)</h2>
+        <div class="content has-text-justified">
+        <!-- <p>
+        We show the qualitative results of P3DTrack
+        </p> -->
+        </div>
+        <div class="content has-text-centered">
+        <video poster="" id="wod" autoplay controls muted loop playsinline width="100%">
+          <source src="./static/videos/WOD_segment-7650923902987369309_2380_000_2400_000.mp4" type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+   <div class="columns is-centered">
+      <div class="column is-full-width">
+      <h2 class="title is-4">(2)  Tracking results on KITTI dataset</h2>
+        <div class="content has-text-justified">
+        </div>
+        <div class="content has-text-centered">
+        <video poster="" id="kitti" autoplay controls muted loop playsinline width="100%">
+          <source src="./static/videos/kitti_0011.mp4" type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+      <h2 class="title is-4">(3)  Tracking results for Pedestrian class</h2>
+        <div class="content has-text-justified">
+        </div>
+        <div class="content has-text-centered">
+        <video poster="" id="kitti" autoplay controls muted loop playsinline width="100%">
+          <source src="./static/videos/1069.mp4" type="video/mp4">
+        </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+      <h2 class="title is-4">(4) Failure cases</h2>
+        <div class="content has-text-justified">
+        <p>
+          The common failure case of our method is the occluded scene, like parking lot, distant objects, occluded objects very close to the camera. The 3D location for these cases in naturally hard to estimate. 
+        </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column">
+          <div class="content">
+          <div class="content has-text-centered">
+          <video poster="" id="openset" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/1013_fail.mp4" type="video/mp4">
+          </video>
+          </div>
+          </div>
+          </div>
+          
+          <div class="column">
+          <div class="content">
+            <div class="content has-text-centered">
+              <video poster="" id="openset" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/1149_fail.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+    <h2 class="title is-4">(5) At night</h2>
+      <div class="content has-text-justified">
+      <p>
+        We show the tracking results at night. When the visibility is low at night, the SfM system will be negatively affected. However, it only slightly affects pseudo label generation. The network learning 2D boxes and 3D representation is less affected.
+      </p>
+      </div>
+      <div class="content has-text-centered">
+        <video poster="" id="wod" autoplay controls muted loop playsinline width="100%">
+          <source src="./static/videos/1058_night.mp4" type="video/mp4">
+        </video>
+        </div>
+     </div>
+      </div>
+    
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under the <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
